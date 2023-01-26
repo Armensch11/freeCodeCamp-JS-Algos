@@ -13,7 +13,7 @@ function partitionArray(arr, left, right){
     swap(arr,right,q);
 
   console.log(arr);
-  return q;
+  return q; 
 };
 function quickSort(arr,left=0,right=arr.length-1){
  if(left<right){ 
