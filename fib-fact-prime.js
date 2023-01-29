@@ -19,3 +19,29 @@ function checkPrime(n){
   }
   return true
 }
+
+
+function debounce(func, delay=3000){
+  let timer;
+  return function(){
+    let context=this;
+    clearTimeout(timer);
+    timer=setTimeout(()=>func.apply(context),delay);
+    
+  }
+}
+const myRun=()=>{
+  console.log("I am running")
+}
+//debounce(myRun)();
+function something(){
+  console.log(this);
+  this.value=3;
+  console.log(this)
+}
+let check=new something()
+console.log(typeof check)
+
+
+
+
